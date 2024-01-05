@@ -23,7 +23,7 @@ cd flask-web-hosting
 flask run -h localhost -p 5000
 ```
 *	Open your default browser and navigate to localhost:5000 in that browser
-
+* Sample credentials - Customer id: 9396144, Passcode: 1234, Password: password, Date of birth: 10-12-2003
 
 ## Features
 
