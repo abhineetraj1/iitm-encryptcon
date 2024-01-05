@@ -99,7 +99,12 @@
         </table>
     </div>
 </div>
+<button id="logout">Logout</button>
 <script>
+document.getElementById('logout').onclick = function () {
+    localStorage.clear();
+    window.location.href="/";
+}
 let logoutTimeout;
 function resetLogoutTimeout() {
     // Clear the existing timeout
