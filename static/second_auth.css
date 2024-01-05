@@ -1,0 +1,19 @@
+#dfg{
+	width: 512px;
+	box-shadow: 0px 0px 10px black;
+	border-radius: 20px;
+}
+.igm{
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin: 3px;
+	border-radius: 8px;
+}
+.igm:hover{
+	border: solid;
+	border-color: blue;
+	margin: 0px;
+	height: 95px;
+	width: 95px;
+}

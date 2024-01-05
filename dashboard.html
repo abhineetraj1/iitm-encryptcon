@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App Dashboard</title>
+    <link rel="shortcut icon" href="static/favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .dashboard {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .customer-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .transaction-history {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <h1>Bank</h1>
+
+    <div class="customer-info">
+        <div>
+            <h3>Customer Name</h3>
+            <p>Mr.J kesavardhanana</p>
+        </div>
+        <div>
+            <h3>Balance</h3>
+            <p>₹5,000.00</p>
+        </div>
+    </div>
+
+    <div class="transaction-history">
+        <h2>Transaction History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2022-01-01</td>
+                    <td>Credited</td>
+                    <td>+₹1,000.00</td>
+                </tr>
+                <tr>
+                    <td>2022-01-05</td>
+                    <td>Debited</td>
+                    <td>-₹500.00</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+let logoutTimeout;
+function resetLogoutTimeout() {
+    // Clear the existing timeout
+    clearTimeout(logoutTimeout);
+    logoutTimeout = setTimeout(logoutUser, 15 * 1000);
+}
+function logoutUser() {
+    window.location.href="/";
+}
+document.addEventListener("mousemove", resetLogoutTimeout);
+document.addEventListener("keydown", resetLogoutTimeout);
+function simulateUserActivity() {
+    resetLogoutTimeout();
+}
+function simulateInactivity() {
+    setTimeout(() => {
+        console.log("Simulating user inactivity for 16 minutes.");
+    }, 15 * 1000);
+}
+resetLogoutTimeout();
+
+</script>
+</body>
+</html>

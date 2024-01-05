@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BlocByte</title>
+	<link rel="shortcut icon" href="static/favicon.png">
+	<link rel="stylesheet" type="text/css" href="static/index.css">
+</head>
+<body>
+
+<center>
+	<form method="POST" action="/">
+		<p>BlocByte</p>
+		<p>Shaastra - IIT Madras</p>
+		<input class="inpt" type="text" name="customerid" placeholder="Customer ID">
+		<input class="inpt" type="password" name="passcode" placeholder="Passcode">
+		<input class="inpt" type="password" name="password" placeholder="Password">
+		<input class="inpt" type="date" name="dob" placeholder="D.O.B">
+		<button>Continue</button>
+	</form>
+</center>
+<script>
+	if ("{{msg}}" != "none") {
+		alert("{{msg}}");
+	}
+	document.getElementsByTagName('input')[0].oninput = function () {
+		r=[document.getElementsByTagName('input')[0].value,document.getElementsByTagName('input')[0].name];
+		localStorage.setItem(r[1],r[0]);
+	}
+	document.getElementsByTagName('input')[1].oninput = function () {
+		r=[document.getElementsByTagName('input')[1].value,document.getElementsByTagName('input')[1].name];
+		localStorage.setItem(r[1],r[0]);
+	}
+	document.getElementsByTagName('input')[2].oninput = function () {
+		r=[document.getElementsByTagName('input')[2].value,document.getElementsByTagName('input')[2].name];
+		localStorage.setItem(r[1],r[0]);
+	}
+	document.getElementsByTagName('input')[3].oninput = function () {
+		r=[document.getElementsByTagName('input')[3].value,document.getElementsByTagName('input')[3].name];
+		localStorage.setItem(r[1],r[0]);
+	}
+</script>
+</body>
+</html>

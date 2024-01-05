@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Authentication</title>
+	<link rel="stylesheet" type="text/css" href="static/second_auth.css">
+	<link rel="shortcut icon" href="static/favicon.png">
+</head>
+<body>
+
+<center>
+	<div id="dfg">
+	</div>
+</center>
+
+<script>
+	var list=[];
+	if (localStorage.length < 4) {window.location.href="/";}
+	for (var i = 10; i > 0; i--) {
+		var a = document.createElement("img");
+		a.src="static/image-"+i+".jpg";
+		a.onclick = function() {
+			alert("Invalid Image selected");
+			window.location.href="/";
+		}
+		a.className="igm";
+		list.push(a);
+	}
+	var a = document.createElement("img");
+	a.src="get_secure_image/"+localStorage.customerid+"/"+localStorage.passcode+"/"+localStorage.password+"/"+localStorage.dob;
+	a.onclick = function() {
+		window.location.href="/dashboard";
+	}
+	a.className="igm";
+	list.push(a);
+	list.sort();
+	for (var i = list.length - 1; i >= 0; i--) {
+		document.getElementById('dfg').appendChild(list[i]);
+	}
+</script>
+</body>
+</html>
